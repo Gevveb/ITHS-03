@@ -25,4 +25,4 @@ jobs:
       # Step 3: Run Smoke Test    
       - name: Run Smoke Test
         run: |
-          curl -I "https://gb-functionapp-03.azurewebsites.net/api/SmokeTest" | grep "200 OK"
+          curl -I https://gbwebapp-03.azurewebsites.net | grep "200 OK"
