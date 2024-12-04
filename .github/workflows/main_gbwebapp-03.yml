@@ -22,3 +22,7 @@ jobs:
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_58B6A92A1D32497292CEE7D965C11775 }}
           package: .
+      # Step 3: Run Smoke Test    
+      - name: Run Smoke Test
+        run: |
+          curl -I https://gb-functionapp-03.azurewebsites.net/api/SmokeTest | grep "200 OK"
